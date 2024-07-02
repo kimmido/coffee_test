@@ -1,0 +1,37 @@
+@charset "utf-8";
+.main--result {
+    text-align: center;
+}
+
+.fail-img {
+    margin-top: 80px;
+    width: 80px;
+}
+
+.result-txt,
+.fail-txt,
+.cause {
+    margin-top: var(--margin-Xlarge);
+}
+
+.result-txt {
+    font-size: var(--font-size-title);
+    line-height: 30px;
+    font-weight: 600;
+    color: var(--color-brand01);
+}
+
+.fail-txt {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    word-break: keep-all;
+}
+
+.cause {
+    font-weight: 600;
+}
+
+.cause--emph {
+    color: var(--color-point);
+}

@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+.loading {
+    position: relative;
+    height: 100%;
+    background-color: var(--color-brand02);
+}
+
+.loading__logo {
+    width: calc(192 / 343 * 100%);
+    margin-top: calc(144 / 812 * 100vh);
+}
+
+.loading__meaning {
+    margin-top: var(--margin-default);
+    width: calc(247 / 343 * 100%);
+}
+
+.loading__robot {
+    position: absolute;
+    right: calc(150 / 375 * -100%); bottom: calc(100 / 812 * 100vh);
+    width: calc(410 / 375 * 100%);
+}

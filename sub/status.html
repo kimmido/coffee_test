@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="로봇팔이 만들어주는 맛있는 커피를 먹어보세요.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://www.rif.cafe/">
+    <meta property="og:site_name" content="CRC">
+    <meta property="og:title" content="CRC 주문하기">
+    <meta property="og:image" content="http://www.rif.cafe/images/og.jpg">
+    <meta property="og:description" content="로봇팔이 만들어주는 맛있는 커피를 먹어보세요.">
+    <meta property="og:locale" content="ko_KR">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/common.css">
+    <title>CRC 주문현황</title>
+    <link rel="stylesheet" href="./css/status.css">
+    <script type="text/javascript" src="../js/core/ajax.js"></script>
+    <script type="text/javascript" src="../js/loading.js"></script>
+    <script type="text/javascript" src="../js/data.js"></script>
+    <script type="text/javascript" src="../js/total_price.js"></script>
+    <script type="text/javascript" src="./js/status.js"></script>
+</head>
+<body>
+    <div class="white-screen"></div>
+    <header class="header header--line">
+        <div class="header__relative">
+            <h1 class="header__logo--invisible"><img src="../images/logo.svg" alt="CRC"></h1>
+            <a class="header__back" href="../order.html">
+                <img class="header__back-img" src="../images/icon_arrow_BL.svg" alt="뒤로가기">
+            </a>
+            <h2 class="header__title">음료준비현황</h2>
+        </div>
+    </header>
+    <main class="main main--status">
+        <div class="container">
+            <div class="speech-bubble speech-bubble--history">
+                <div class="id-box">
+                    <span class="id-box__title">주문 번호</span>
+                    <strong class="order-id">6</strong>
+                </div>
+                <div class="location">
+                    <p class="location__txt">CRC <span class="location__name">00역</span>점입니다.</p>
+                </div>
+                <div class="phone">
+                    <span class="phone__title">전화번호</span>
+                    <span class="phone__num">01012345678</span>
+                </div>
+                <div class="payment">
+<!--                    <div class="payment__flex">-->
+<!--                        <span class="payment__method-title">결제수단</span>-->
+<!--                        <span class="payment__method">신한카드(1234)</span>-->
+<!--                    </div>-->
+                    <div class="payment__flex">
+                        <span class="payment__date-title">결제일자</span>
+                        <span class="payment__date">2023.6.27. 09:45:58</span>
+                    </div>
+                </div>
+                <div class="product-list">
+                </div>
+                <div class="total">
+                    <span class="total__title">결제 금액</span>
+                    <strong class="total__price">9,000</strong>
+                </div>
+            </div><!--history__speech-bubble-->
+            <div class="robot">
+                <img class="robot__img" src="../images/robot_face.svg" alt="로봇 얼굴">
+            </div>
+        </div><!--container-->
+        <div class="bottom-btn">
+            <a href="../order.html" class="bottom-btn__link">
+                <strong class="bottom-btn__txt">주문화면으로</strong>
+            </a>
+        </div>
+    </main>
+</body>
+</html>

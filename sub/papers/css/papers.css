@@ -1,0 +1,157 @@
+.main--papers {
+    text-align: justify;
+    line-height: calc(var(--font-size-small) + 8px);
+    counter-reset: chapter 0;
+    font-size: var(--font-size-small);
+    word-break: break-all;
+}
+
+table {
+    width: 100%;
+    font-size: var(--font-size-small);
+    text-align: center;
+    word-break: keep-all;
+    overflow: auto;
+}
+
+th,
+td {
+    padding: var(--margin-small);
+    border: 1px solid var(--color-gray05);
+}
+
+th {
+    font-weight: normal;
+}
+
+a {
+    text-decoration: underline;
+}
+
+/* chapter */
+.chapter {
+    counter-reset: section 0;
+}
+
+.chapter__title {
+    margin-top: var(--margin-Xlarge);
+}
+
+.chapter__title::before {
+    counter-increment: chapter 1;
+    content: '제' counter(chapter) '장 ';
+}
+
+
+/* section */
+.txt-section {
+    padding: var(--margin-large) 0;
+    border-bottom: 1px solid var(--color-gray05);
+    counter-reset: circle 0;
+}
+
+.txt-section:last-child {
+    border-bottom: 0;
+}
+
+/* section title */
+.section__title {
+    position: relative;
+    margin-bottom: var(--margin-small);
+    font-size: var(--font-size-small);
+}
+
+.section__title::before {
+    counter-increment: section 1;
+}
+
+.section__title--terms::before {
+    content: '제 ' counter(section) '조 ';
+}
+
+.section__title--policy::before {
+    content: counter(section) '. ';
+}
+
+.section__title--refund {
+    color: var(--color-brand01);
+}
+
+.section__title--refund::before {
+    counter-increment: none;
+    content: '<';
+}
+
+.section__title--refund::after {
+    counter-increment: none;
+    content: '>';
+}
+
+.title-small {
+    font-weight: normal;
+}
+
+/* txt-box */
+.txt-box {
+    margin-bottom: var(--margin-small);
+    counter-reset: dot 0;
+}
+
+.txt-box:last-child {
+    margin-bottom: 0;
+}
+
+.txt-box-inner {
+    color: var(--color-gray02);
+    margin-bottom: 4px;
+}
+
+.txt-box-inner:last-child {
+    margin-bottom: 0;
+}
+
+/* bullet, number */
+.bullet {
+    position: relative;
+    margin-left: var(--margin-default);
+}
+
+.bullet::before {
+    position: absolute;
+    left: -10px; top: 6px;
+    display: block;
+    content: '';
+    width: 2px; height: 2px;
+    background-color: var(--color-gray01);
+    border-radius: 50%;
+}
+
+.num-circle {
+    position: relative;
+}
+
+.num-circle::before {
+    display: inline-block;
+    transform: translateY(-1px);
+    counter-increment: circle 1;
+    content: counter(circle);
+    margin-left: 0.4em;
+    margin-right: 0.4em;
+    font-size: 0.6em;
+}
+
+.num-circle::after {
+    content: '';
+    position: absolute;
+    top: 3px; left: 0;
+    display: block;
+    width: 0.8em; height: 0.8em;
+    border: 1px solid var(--color-gray02);
+    border-radius: 50%;
+}
+
+.num-dot::before {
+    font-size: 0.8em;
+    counter-increment: dot 1;
+    content: counter(dot) '. ';
+}

@@ -1,0 +1,148 @@
+@charset "utf-8";
+/* 표 오른쪽 상단 버튼 */
+.sorting,
+.reset-btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: var(--margin-small);
+}
+
+.sorting__arrange {
+    margin-right: var(--margin-default);
+}
+
+.sorting__arrange,
+.sorting__filter {
+    position: relative;
+}
+
+.arrange__btn,
+.filter__btn {
+    display: block;
+    padding: 8px;
+}
+
+select[name="arrange__btn"], 
+select[name="filter__btn"] {
+    padding: 4px;
+}
+
+/* 본문 table */
+table {
+    width: 100%;
+    font-size: var(--font-size-small);
+    text-align: center;
+    word-break: keep-all;
+    overflow: auto;
+}
+
+th,
+td {
+    padding: var(--margin-small);
+    border: 1px solid var(--color-gray05);
+    cursor: default;
+}
+
+/* .order-table */
+.result {
+    border-radius: 100px;
+    padding: 4px 0;
+    font-weight: 600;
+    /* font-size: var(--font-size-small); */
+    color: #fff;
+}
+
+.result--success {
+    background-color: green;
+}
+
+.result--fail {
+    background-color: rgb(217, 0, 0);
+}
+
+.order-table .date{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.close-btn {
+    cursor: pointer;
+}
+
+/* ===== modal ===== */
+.modal {
+    top: 16%;
+    height: auto;
+    max-height: 64%;
+    word-break: keep-all;
+    overflow: auto;
+}
+
+.detail__table {
+    width: 100%;
+}
+
+.detail__title {
+    padding: var(--margin-small);
+    font-size: var(--font-size-default);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: var(--margin-default);
+}
+
+.detail__table th,
+.detail__table td {
+    padding: 14px 0;
+    line-height: calc(1em + 8px);
+    text-align: center;
+    border: 1px solid var(--color-gray05);
+}
+
+.detail__table th {
+    width: 36%;
+    font-weight: 400;
+}
+
+.detail__table td {
+    width: 64%;
+    color: var(--color-gray02);
+    vertical-align: middle;
+}
+
+.product__item {
+    display: block;
+}
+
+.detail__result--success {
+    color: green;
+}
+
+.detail__result--fail{
+    color: rgb(217, 0, 0);
+}
+
+.detail__table + .close-btn {
+    width: 100%; height: var(--height-btn-big);
+    margin-top: var(--margin-Xlarge);
+    line-height: var(--height-btn-big);
+    text-align: center;
+    border-radius: 100px;
+    background-color: var(--color-brand01);
+}
+
+.close-txt {
+    font-size: var(--font-size-title);
+    color: #fff;
+    font-weight: 600;
+}
+
+/* 주문대기열 */
+.reset-btn,
+.del {
+    cursor: pointer;
+}
+
+.del {
+    color: var(--color-point);
+    text-decoration: underline;
+}

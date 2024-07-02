@@ -1,0 +1,120 @@
+@charset "utf-8";
+.main--complete {
+    text-align: center;
+    height: 100vh;
+}
+
+/* order-number */
+.speech-bubble--complete {
+    width: fit-content;
+    margin: var(--margin-Xlarge) auto 0;
+    padding-left: var(--margin-Xlarge);
+    padding-right: var(--margin-Xlarge);
+    background-color: var(--color-brand02);
+}
+
+.speech-bubble--complete:after {
+	left: calc(50% - 10px); bottom: -10px;
+	border-top-color: var(--color-brand02);
+	border-top-width: 16px;
+	border-bottom: 0;
+}
+
+.order-number {
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--color-point);
+}
+
+.robot-img {
+    width: calc(196 / 375 * 100%);
+    margin-top: var(--margin-default);
+    margin-bottom: var(--margin-default);
+}
+
+/* result-txt */
+.result-txt {
+    font-size: var(--font-size-title);
+    font-weight: 600;
+    color: var(--color-brand01);
+}
+
+/* phone */
+.phone {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    margin: var(--margin-Xlarge) auto;
+}
+
+.phone__line {
+    display: block;
+    width: 12px; height: 2px;
+    background-color: var(--color-gray03);
+    border-radius: 100px;
+}
+
+.phone__header {
+    font-size: var(--font-size-emph);
+}
+
+.phone__input {
+    width: 79px; height: 36px;
+    font-size: var(--font-size-title);
+    text-align: center;
+    font-weight: 600;
+    border-radius: 10px;
+    border: 2px solid var(--color-gray04);
+}
+
+/* desc */
+.desc {
+    font-weight: 600;
+    line-height: 26px;
+}
+
+/* ====== modal ====== */
+.modal {
+    top: 32%;
+}
+
+.modal__txt {
+    margin: var(--margin-default);
+    text-align: left;
+    word-break: keep-all;
+}
+
+.modal__txt--emph {
+    font-weight: 600;
+    color: var(--color-point);
+}
+
+/* modal__btn-box */
+.modal__btn-box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--margin-Xlarge);
+}
+
+.modal__btn {
+    width: calc(50% - var(--margin-small));
+    height: var(--height-btn-big);
+    border: 1px solid var(--color-brand01);
+    border-radius: 100px;
+}
+
+.modal__btn--no {
+    color: var(--color-brand01);
+    background-color: var(--color-brand04);
+}
+
+.modal__btn--yes {
+    color: #fff;
+    background-color: var(--color-brand01);
+}
+
+.modal__btn-txt {
+    font-size: var(--font-size-default);
+    font-weight: 600;
+}

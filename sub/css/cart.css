@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+.header--cart {
+    background-color: var(--color-brand04);
+}
+
+.main--cart {
+    min-height: 100vh;
+    padding-bottom: var(--height-btn-bottom);
+    background-color: var(--color-brand04); 
+}
+
+/* cart-list */
+.cart-list {
+    margin-top: calc(var(--margin-default) * 2);
+    padding: var(--margin-default);
+    border-radius: var(--radius-large);
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+}
+
+.product--cart {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: calc(var(--margin-default) * 2);
+}
+
+.product--cart:last-child {
+    margin-bottom: 0;
+}
+
+.product--cart .product__img-box {
+    width: calc(110 / 311 * 100% );
+    margin: 0 0 auto;
+}
+
+.poduct__con {
+    width: calc(185 / 311 * 100% );
+    margin: var(--margin-small) 0;
+}
+
+.product__txt-box {
+    width: calc(100% - 48px);
+}
+
+.product__name,
+.product__price {
+    display: block;
+}
+
+.product__name {
+    font-weight: 600;
+    text-align: justify;
+}
+
+.product__price {
+    margin-top: var(--margin-small);
+    color: var(--color-gray02);
+}
+
+.product__count-wrap {
+    margin: var(--margin-default) 0 0 auto;
+}
+
+.product__count {
+    font-weight: 600;
+}
+
+.product__total--number {
+    display: none;
+}
+
+.product__del {
+    position: absolute;
+    right: -10px; top: -10px;
+    padding: 14px;
+    width: var(--height-btn-big); height: var(--height-btn-big);
+}
+
+.product__del-img {
+    display: block;
+}
+
+/* total */
+.total {
+    margin-top: calc(var(--margin-default) * 2);
+    margin-bottom: calc(var(--margin-default) * 2);
+}
+
+.total__line {
+    display: block;
+    width: 100%; height: 1px;
+    background-color: var(--color-gray05);
+}
+
+.total__txt-box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--margin-default   );
+}
+
+.total__txt {
+    font-size: var(--font-size-title);
+}
+
+.total__txt--emph {
+    font-size: var(--font-size-emph);
+    font-weight: 600;
+}

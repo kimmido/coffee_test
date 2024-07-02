@@ -1,0 +1,153 @@
+@charset "utf-8";
+.main--status {
+    height: 100%;
+    background-color: var(--color-brand04);
+}
+
+/* history */
+.speech-bubble--history {
+    width: calc(100% - 44px);
+    margin-top: var(--margin-Xlarge);
+    margin-left: auto;
+    font-size: var(--font-size-caption);
+    color: var(--color-gray02);
+}
+
+.speech-bubble--history:after {
+	right: -10px; bottom: var(--margin-large);
+	border-left-color: #fff;
+	border-left-width: 16px;
+	border-right: 0;
+}
+
+/* id-box, location */
+.id-box__title,
+.order-id,
+.location {
+    display: block;
+    margin: 0 auto var(--margin-small);
+    width: max-content;
+}
+
+.order-id {
+    color: var(--color-point);
+    font-size: var(--font-size-emph);
+}
+
+.location {
+    margin-bottom: var(--margin-default);
+}
+
+/* phone, payment, product-list, total */
+.phone,
+.payment,
+.product-list,
+.total {
+    padding-top: var(--margin-default);
+    padding-bottom: var(--margin-default);
+    border-top: 1px solid var(--color-gray05);
+}
+
+.total {
+    padding-bottom: 0;
+}
+
+.phone,
+.payment__flex,
+.product__flex,
+.total {
+    display: flex;
+    justify-content: space-between;
+}
+
+.payment__flex,
+.product__flex {
+    margin-bottom: var(--margin-small);
+}
+
+.payment__flex:last-child,
+.product__flex:last-child {
+    margin-bottom: 0;
+}
+
+.product__name,
+.product__price,
+.product__count-box,
+.product__total {
+    display: block;
+}
+
+.product__name {
+    width: 50%;
+}
+
+.product__price,
+.product__total {
+    width: 20%;
+}
+.product__count-box {
+    width: 10%;
+    text-align: center;
+}
+
+.product__total {
+    text-align: right;
+}
+
+.phone__num,
+.payment__method,
+.payment__date,
+.product__total,
+.total__title {
+    color: var(--color-gray01);
+}
+
+.total {
+    align-items: center;
+    font-weight: 600;
+}
+
+.total__price {
+    font-size: var(--font-size-title);
+    color: var(--color-brand01);
+}
+
+/* robot */
+.robot {
+    position: relative;
+    margin-top: var(--margin-Xlarge);
+}
+
+.robot__img {
+    position: absolute;
+    top: 15px;
+    width: var(--width-icon);
+}
+
+.speech-bubble--robot {
+    width: fit-content;
+    padding-top: var(--margin-default);
+    padding-bottom: var(--margin-default);
+    margin-left: 44px;
+    margin-bottom: var(--margin-small);
+}
+
+.speech-bubble--robot:last-child {
+    margin-bottom: 0;
+}
+
+.speech-bubble--robot:after {
+	left: -10px; bottom: calc(50% - 8px);
+	border-right-color: #fff;
+	border-right-width: 16px;
+	border-left: 0;
+}
+
+.robot__txt {
+    font-size: var(--font-size-title);
+    font-weight: 600;
+}
+
+.robot__txt--emph {
+    color: var(--color-point);
+}

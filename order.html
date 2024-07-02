@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="로봇팔이 만들어주는 맛있는 커피를 먹어보세요.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://www.rif.cafe/">
+    <meta property="og:site_name" content="CRC">
+    <meta property="og:title" content="CRC 주문하기">
+    <meta property="og:image" content="http://www.rif.cafe/images/og.jpg">
+    <meta property="og:description" content="로봇팔이 만들어주는 맛있는 커피를 먹어보세요.">
+    <meta property="og:locale" content="ko_KR">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/order.css">
+    <title>CRC 주문하기</title>
+    <script type="text/javascript" src="./js/core/ajax.js"></script>
+    <script type="text/javascript" src="./js/loading.js"></script>
+    <script type="text/javascript" src="./js/data.js"></script>
+    <script type="text/javascript" src="./js/order.js"></script>
+    <script type="text/javascript" src="./js/tab_menu.js"></script>
+    <script type="text/javascript" src="./js/product_modal.js"></script>
+    <script type="text/javascript" src="./js/counter.js"></script>
+    <script type="text/javascript" src="./js/total_price.js"></script>
+    <script type="text/javascript" src="./js/footer_toggle.js"></script>
+</head>
+<body>
+    <div class="white-screen"></div>
+    <header class="header">
+        <div class="header__relative">
+            <h1 class="header__logo">
+                <img src="./images/logo.svg" alt="CRC">
+            </h1>
+            <h2 class="header__title">주문</h2>
+            <a class="status-btn" href="./sub/status.html">
+                <img class="status-btn__img" src="./images/robot_face.svg" alt="로봇얼굴">
+            </a>
+            <a class="menu-trigger" href="./sub/menu/menu.html">
+                <span class="menu-trigger__line"></span>
+                <span class="menu-trigger__line"></span>
+            </a>
+        </div><!--header__relative-->
+    </header>
+    <main>
+        <section class="main main--order">
+            <div class="tab">
+                <div class="tab__nav-box">
+                    <div class="tab__flex">
+                        <div class="tab__nav tab__nav--on"><a class="nav__txt" href="#">전체</a></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="tab__con tab__con--on">
+                    </div>
+                </div><!--container-->
+            </div><!--tab-->
+            <div class="location">
+                <img class="location__img" src="./images/robot_face.svg" alt="로봇 얼굴">
+                <p class="location__txt">CRC <span class="location__name">00역</span>점입니다.</p>
+            </div>
+            <div class="bottom-btn">
+                <a href="./sub/cart.html" class="bottom-btn__link">
+                    <strong class="bottom-btn__txt">장바구니</strong>
+                    <img class="bottom-btn__img" src="./images/icon_bag_WH.svg" alt="가방 아이콘">
+                    <span class="cart-number">3</span>
+                </a>
+            </div>
+        </section><!--main-->
+        <section class="modal modal--product">
+            <a class="header__back header__back--modal" href="./order.html">
+                <img class="header__back-img" src="./images/icon_arrow_BL.svg" alt="화살표">
+            </a>            
+            <div class="product product--modal">
+                <div class="product__img-box">
+                    <div class="product__img-inner">
+                    </div>
+                </div>
+                <div class="product__txt-box">
+                    <strong class="product__name">아메리카노 ICE</strong>
+                    <span class="product__price"><span class="product__price--number">3,000</span>원</span>
+                    <span class="product__id product__id--invisible"></span>
+                </div>
+                <div class="product__total-flex">
+                    <strong class="product__total"><span class="product__total--number">9,000</span>원</strong>
+                    <div class="product__count-wrap">
+                        <div class="product__decrease-area">
+                            <div class="product__decrease-box"> 
+                                <span class="decrease__line"></span>
+                            </div>
+                        </div>
+                        <span class="product__count">1</span>
+                        <div class="product__increase-area">
+                            <div class="product__increase-box">
+                                <span class="increase__line"></span>
+                                <span class="increase__line"></span>
+                            </div>
+                        </div>
+                    </div><!--product__count-wrap-->
+                </div><!--product__total-flex-->
+            </div><!--product-->
+            <div class="bottom-btn bottom-btn--modal">
+                <a href="" class="bottom-btn__link bottom-btn__link--one">
+                    <img class="bottom-btn__img" src="./images/icon_bag_BL.svg" alt="가방 아이콘">
+                </a>
+                <a href="./sub/payment.html" class="bottom-btn__link bottom-btn__link--two">
+                    <strong class="bottom-btn__txt">결제하기</strong>
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer__link-list">
+            <a class="footer__link" href="./sub/papers/terms.html">이용약관</a>
+            <span class="footer__line"></span>
+            <a class="footer__link" href="./sub/papers/policy.html">개인정보처리방침</a>
+            <span class="footer__line"></span>
+            <a class="footer__link" href="./sub/papers/refund.html">교환/환불정보</a>
+        </div>
+        <div class="footer__accordion">
+            <span class="accordion__txt">(주)씨디알시스템 사업자정보</span>
+            <img class="accordion__icon accordion__icon--open" src="./images/icon_arrow_GY.svg" alt="화살표">
+        </div>
+        <div class="business-info">
+            <div class="container">
+                <p class="business-info__item">
+                    <span class="business-info__name">대표이사:&nbsp;</span>
+                    <span class="business-info__con">안기탁</span>
+                </p>
+                <p class="business-info__item">
+                    <span class="business-info__name">사업자번호:&nbsp;</span>
+                    <span class="business-info__con">503-86-19899</span>
+                </p>
+                <p class="business-info__item">
+                    <span class="business-info__name">전화:&nbsp;</span>
+                    <span class="business-info__con"><a href="tel:070-8015-7577">070-8015-7577</a></span>
+                </p>
+                <p class="business-info__item">
+                    <span class="business-info__name">통신판매번호:&nbsp;</span>
+                    <span class="business-info__con">제 2023-화성동탄-2198 호</span>
+                </p>
+                <address class="business-info__item">
+                    <span class="business-info__name">주소:&nbsp;</span>
+                    <span class="business-info__con business-info__con--address">경기도 화성시 동탄역로160, KAIST 화성시 사이언스 허브, 
+                        KAIST 동탄캠퍼스 108호(오산동, 롯데백화점 동탄점 B3)</span>
+                </address>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

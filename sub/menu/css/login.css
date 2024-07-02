@@ -1,0 +1,41 @@
+@charset "utf-8";
+ 
+.login-wapper {
+    display: flex;
+    align-items: center;
+    height: calc(100vh - var(--height-header));
+}
+
+.login {
+    padding-bottom: 100px;
+}
+
+.notice {
+    margin-bottom: calc(var(--margin-default)*2);
+    color: var(--color-point);
+}
+
+.login__input,
+.login__sbmit {
+    display: block;
+    width: 100%; height: var(--height-btn-big);
+    margin-bottom: var(--margin-small);
+    border-radius: 100px;
+}
+
+.login__input {
+    padding: 0 var(--margin-default);
+    border: 1px solid var(--color-gray04);
+}
+
+.login__input::placeholder {
+    font-size: var(--font-size-caption);
+}
+
+.login__sbmit {
+    border: 1px solid var(--color-brand01);
+    background-color: var(--color-brand01);
+    font-size: var(--font-size-title);
+    color: #fff;
+    font-weight: 600;
+}

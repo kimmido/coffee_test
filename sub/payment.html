@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://www.rif.cafe/">
+    <meta property="og:site_name" content="CRC">
+    <meta property="og:title" content="CRC 주문하기">
+    <meta property="og:image" content="http://www.rif.cafe/images/og.jpg">
+    <meta property="og:description" content="로봇팔이 만들어주는 맛있는 커피를 먹어보세요.">
+    <meta property="og:locale" content="ko_KR">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="./css/payment.css">
+    <title>CRC 결제</title>
+    <script type="text/javascript" src="../js/core/ajax.js"></script>
+    <script type="text/javascript" src="../js/loading.js"></script>
+    <script type="text/javascript" src="../js/data.js"></script>
+    <script type="text/javascript" src="../js/counter.js"></script>
+    <script type="text/javascript" src="../js/page_back.js"></script>
+    <script type="text/javascript" src="../js/total_price.js"></script>
+    <script type="text/javascript" src="../js/footer_toggle.js"></script>
+    <script type="text/javascript" src="./js/payment.js"></script>
+    <script src="https://cdn.iamport.kr/v1/iamport.js"></script>
+    <script type="text/javascript" src="../js/import.js"></script>
+</head>
+<body>
+    <div class="white-screen"></div>
+    <div class="payment">
+        <header class="header header--line">
+            <div class="header__relative">
+                <h1 class="header__logo--invisible"><img src="../images/logo.svg" alt="CRC"></h1>
+                <a class="header__back" href="../order.html">
+                    <img class="header__back-img" src="../images/icon_arrow_BL.svg" alt="뒤로가기">
+                </a>
+                <h2 class="header__title">주문/결제</h2>
+            </div>
+        </header>
+        <main class="main main-payment">
+            <div class="payment-section">
+                <div class="container">
+                    <h3 class="payment-title">주문 상품</h3>
+                    <ul class="product-list">
+                    </ul>
+                    <span class="total__line"></span>
+                    <div class="payment__total">
+                        <h3 class="total__title">결제 금액</h3>
+                        <strong class="total__price"><span class="total__price--number">9,000</span>원</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="payment-section">
+                <div class="container">
+                    <div class="flex-consent">
+                        <input class="consent__check"
+                        id="consent" type="checkbox">
+                        <label class="consent__check-txt" for="consent">상기 결제 정보를 확인 하였으며, 구매 진행에 동의합니다.(필수)</label>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-btn">
+                <a href="#" class="bottom-btn__link">
+                    <strong class="bottom-btn__txt">결제하기</strong>
+                </a>
+            </div>
+        </main>
+        <footer>
+            <div class="footer__link-list">
+                <a class="footer__link" href="./papers/terms.html">이용약관</a>
+                <span class="footer__line"></span>
+                <a class="footer__link" href="./papers/policy.html">개인정보처리방침</a>
+                <span class="footer__line"></span>
+                <a class="footer__link" href="./papers/refund.html">교환/환불정보</a>
+            </div>
+            <div class="footer__accordion">
+                <span class="accordion__txt">(주)씨디알시스템 사업자정보</span>
+                <img class="accordion__icon" src="../images/icon_arrow_GY.svg" alt="화살표">
+            </div>
+            <div class="business-info">
+                <div class="container">
+                    <p class="business-info__item">
+                        <span class="business-info__name">대표이사:&nbsp;</span>
+                        <span class="business-info__con">안기탁</span>
+                    </p>
+                    <p class="business-info__item">
+                        <span class="business-info__name">사업자번호:&nbsp;</span>
+                        <span class="business-info__con">503-86-19899</span>
+                    </p>
+                    <p class="business-info__item">
+                        <span class="business-info__name">전화:&nbsp;</span>
+                        <span class="business-info__con"><a href="tel:070-8015-7577">070-8015-7577</a></span>
+                    </p>
+                    <p class="business-info__item">
+                        <span class="business-info__name">통신판매번호:&nbsp;</span>
+                        <span class="business-info__con">제 2023-화성동탄-2198 호</span>
+                    </p>
+                    <address class="business-info__item">
+                        <span class="business-info__name">주소:&nbsp;</span>
+                        <span class="business-info__con business-info__con--address">경기도 화성시 동탄역로160, KAIST 화성시 사이언스 허브, 
+                        KAIST 동탄캠퍼스 108호(오산동, 롯데백화점 동탄점 B3)</span>
+                    </address>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+.main-payment {
+    min-height: 78vh;
+    background-color: var(--color-gray06);
+}
+
+.payment-section {
+    padding: var(--margin-Xlarge) 0;
+    margin-bottom: var(--margin-small);
+    background-color: #fff;
+}
+
+.payment-title {
+    margin-bottom: var(--margin-large);
+}
+
+.product-payment {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--margin-large);
+}
+
+.product-payment .product__img-box {
+    width: calc(82 / 343 * 100%);
+    padding: var(--margin-small);
+    margin: 0;
+}
+
+.product-payment .product__txt-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: calc(240 / 343 * 100%);
+    font-size: var(--font-size-small);
+}
+
+.product__name {
+    font-weight: 600;
+}
+
+.txt-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product__count-box,
+.product__price {
+    color: var(--color-gray02);
+}
+
+.total__line {
+    display: block;
+    width: 100%; height: 1px;   
+    background-color: var(--color-gray05);
+}
+
+.payment__total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--margin-large);
+}
+
+.total__price {
+    font-size: var(--font-size-emph);
+    font-weight: 600;
+    color: var(--color-brand01);
+}
+
+/* consent */
+.flex-consent {
+    display: flex;
+    align-items: top;
+}
+
+.consent__check {
+    margin-top: 2px;
+    margin-bottom: auto;
+}
+
+.consent__check-txt {
+    margin-left: 6px;
+    color: var(--color-gray02);
+}
+
+.consent__check--emph {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-point) inset;
+}
+
+.consent__check--emph + .consent__check-txt {
+    color: var(--color-point);
+}
+
+.consent__check:checked {
+    box-shadow: none;
+}
+
+.consent__check:checked + .consent__check-txt {
+    font-weight: 600;
+    color: var(--color-gray02);
+}
+
+/* =========== footer =========== */
+footer {
+    padding-bottom: calc(var(--height-btn-bottom) + var(--margin-Xlarge));
+    background-color: var(--color-gray06);
+}

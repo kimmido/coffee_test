@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/admin/css/admin.css">
+    <title>CRC 관리자 페이지</title>
+    <script type="text/javascript" src="/js/core/ajax.js"></script>
+    <script type="text/javascript" src="/js/tab_menu.js"></script>
+    <script type="text/javascript" src="/admin/js/admin.js"></script>
+</head>
+<body>
+    <header class="header header--cart">
+        <div class="header__relative">
+            <h1 class="header__logo--invisible"><img src="../images/logo.svg" alt="CRC"></h1>
+            <a class="header__logout" href="/admin/logout">로그아웃</a>
+            <h2 class="header__title">관리</h2>
+        </div>
+    </header>
+    <main class="main">
+        <div class="tab__nav-box">
+            <div class="tab__flex">
+                <div class="tab__nav tab__nav--on"><a class="nav__txt" href="#">주문 이력 관리</a></div>
+                <div class="tab__nav"><a class="nav__txt" href="#">주문 대기열</a></div>
+                <div class="tab__nav"><a class="nav__txt" href="#">상태 이력 관리</a></div>
+            </div>
+        </div>
+        <div class="tab__con tab__con--on">
+            <div class="order-wrap">
+                <div class="container">
+                    <div class="sorting">
+                        <div class="sorting__arrange">
+                            <span class="arrange__title">정렬</span>
+                            <select name="arrange__btn">
+                                <option value="newest">최신순</option>
+                                <option value="oldest">오래된 순</option>
+                                <option value="success">성공 우선순</option>
+                                <option value="fail">실패 우선순</option>
+                            </select>
+                        </div>
+                        <div class="sorting__filter">
+                            <span class="filter__title">필터</span>
+                            <select name="filter__btn">
+                                <option value="ALL">전체</option>
+                                <option value="DAY">1일</option>
+                                <option value="WEEK">1주일</option>
+                                <option value="MONTH">1개월</option>
+                            </select>
+                        </div>
+                    </div><!--sorting-->
+                    <table class="order-table">
+                        <caption class="caption--invisible">주문이력 표</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">주문 일자</th>
+                                <th scope="col">고객 전화번호</th>
+                                <th scope="col">결제 금액</th>
+                                <th scope="col">처리 결과</th>
+                            </tr>
+                        </thead>
+            
+                        <tbody>
+       
+                        </tbody>
+                    </table>
+                </div><!--container-->
+                <div class="overlay">
+                    <div class="modal">
+                        <table class="detail__table">
+                            <caption class="detail__title">상세 주문 정보</caption>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">주문 일자</th>
+                                    <td class="detail__date">
+                                        2023.7.21. 09:45:58
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">고객 전화번호</th>
+                                    <td class="detail__phone">
+                                        010-0000-0000
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">주문 음료</th>
+                                    <td class="detail__product">
+                                        <span class="product__item">아이스 아메리카노(1)</span>
+                                        <span class="product__item">핫 아메리카노(1)</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">결제 금액</th>
+                                    <td class="detail__price">
+                                        3,500 (총 2잔)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">처리 결과</th>
+                                    <td class="detail__result">
+                                        <span class="detail__result--fail">
+                                            실패<br>
+                                            주문전송 타임아웃
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table><!--detail__table-->
+                        <div class="close-btn">
+                            <span class="close-txt">닫기</span>
+                        </div>
+                    </div><!--modal-->
+                </div><!--overlay-->
+            </div><!--order-wrap-->
+        </div><!--tab__con-->
+        <div class="tab__con">
+            <div class="queue-wrap">
+                <div class="container">
+                    <div class="reset-btn">
+                        <span>초기화</span>
+                    </div>
+                    <table class="queue-table">
+                        <caption class="caption--invisible">주문 대기 리스트</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">주문 대기열 번호</th>
+                                <th scope="col">주문 일자</th>
+                                <th scope="col">처리 상태</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+            
+                        <tbody>
+                           
+                        </tbody>
+                    </table>
+                </div><!--container-->
+            </div>
+        </div><!--tab__con-->
+        <div class="tab__con">
+            <div class="container">
+                <table class="history-table">
+                    <caption class="caption--invisible">상태 이력 표</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">발생 일자</th>
+                            <th scope="col">에러코드</th>
+                        </tr>
+                    </thead>
+        
+                    <tbody>
+                        <tr>
+                            <td class="date">2023.7.21. 09:45:58</td>
+                            <td class="error">100</td>
+                        </tr>
+                        <tr>
+                            <td class="date">2023.7.21. 09:45:58</td>
+                            <td class="error">100</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div><!--container-->
+        </div><!--tab__con-->
+    </main>
+</body>
+</html>

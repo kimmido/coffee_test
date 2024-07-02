@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://www.rif.cafe/">
+    <meta property="og:site_name" content="CRC">
+    <meta property="og:title" content="CRC 주문하기">
+    <meta property="og:image" content="http://www.rif.cafe/images/og.jpg">
+    <meta property="og:description" content="로봇팔이 만들어주는 맛있는 커피를 먹어보세요.">
+    <meta property="og:locale" content="ko_KR">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="./css/cart.css">
+    <title>CRC 장바구니</title>
+    <script type="text/javascript" src="../js/core/ajax.js"></script>
+    <script type="text/javascript" src="../js/loading.js"></script>
+    <script type="text/javascript" src="../js/data.js"></script>
+    <script type="text/javascript" src="../js/page_back.js"></script>
+    <script type="text/javascript" src="../js/counter.js"></script>
+    <script type="text/javascript" src="../js/total_price.js"></script>
+    <script type="text/javascript" src="./js/cart.js"></script>
+</head>
+<body>
+    <div class="white-screen"></div>
+    <header class="header header--cart">
+        <div class="header__relative">
+            <h1 class="header__logo--invisible"><img src="../images/logo.svg" alt="CRC"></h1>
+            <a class="header__back" href="../order.html">
+                <img class="header__back-img" src="../images/icon_arrow_BL.svg" alt="뒤로가기">
+            </a>
+            <h2 class="header__title">장바구니</h2>
+        </div>
+    </header>
+    <main class="main main--cart">
+        <div class="container">
+            <div class="cart-list">
+            </div><!--cart-list-->
+            <div class="total">
+                <span class="total__line"></span>
+                <div class="total__txt-box">
+                    <span class="total__txt">총 수량</span>
+                    <span class="total__txt"><span class="total__txt--count">3</span>개</span>
+                </div>
+                <div class="total__txt-box">
+                    <span class="total__txt">총 금액</span>
+                    <strong class="total__txt total__txt--emph"><span class="total__txt--price">9,000</span>원</strong>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-btn">
+            <a href="./payment.html" class="bottom-btn__link">
+                <strong class="bottom-btn__txt">결제하기</strong>
+            </a>
+        </div>
+    </main>
+</body>
+</html>

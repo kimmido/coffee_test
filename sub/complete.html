@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://www.rif.cafe/">
+    <meta property="og:site_name" content="CRC">
+    <meta property="og:title" content="CRC 주문하기">
+    <meta property="og:image" content="http://www.rif.cafe/images/og.jpg">
+    <meta property="og:description" content="로봇팔이 만들어주는 맛있는 커피를 먹어보세요.">
+    <meta property="og:locale" content="ko_KR">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="./css/complete.css">
+    <title>CRC 주문 완료</title>
+    <script type="text/javascript" src="../js/core/ajax.js"></script>
+    <script type="text/javascript" src="../js/loading.js"></script>
+    <script type="text/javascript" src="./js/complete.js"></script>
+</head>
+<body>
+    <div class="white-screen"></div>
+    <header class="header">
+        <div class="header__relative">
+            <h1 class="header__logo--invisible"><img src="../images/logo.svg" alt="CRC"></h1>
+            <h2 class="header__title">주문 완료</h2>
+        </div>
+    </header>
+    <main class="main main--complete">
+        <div class="speech-bubble speech-bubble--complete">
+            <strong class="order-number">12</strong>
+        </div>
+        <img class="robot-img" src="../images/robot_bell.svg" alt="종 들고 있는 로봇">
+        <p class="result-txt">주문이 완료되었습니다.</p>
+        <div class="phone">
+            <span class="phone__header">010</span>
+            <span class="phone__line"></span>
+            <input class="phone__input" type="tel" maxlength="4">
+            <span class="phone__line"></span>
+            <input class="phone__input" type="tel" maxlength="4">
+        </div>
+        <p class="desc">음료 준비가 완료되면 핸드폰 번호로<br>알림메세지가 전송됩니다.</p>
+        <div class="overlay">
+            <div class="modal">
+                <div class="modal__txt-box">
+                    <p class="modal__txt">전화번호를 입력하지 않으면 알람 메세지가 전송되지 않습니다.</p>
+                    <p class="modal__txt modal__txt--emph">픽업을 위해 주문 번호를 꼭 기억해 주세요!</p>
+                    <p class="modal__txt">전화번호를 입력하시겠습니까?</p>
+                </div>
+                <div class="modal__btn-box">
+                    <button class="modal__btn modal__btn--no">
+                        <span class="modal__btn-txt">안 할래요</span>
+                    </button>
+                    <button class="modal__btn modal__btn--yes">
+                        <span class="modal__btn-txt">할래요</span>
+                    </button>
+                </div>
+            </div><!--modal-->
+        </div><!--overlay-->
+        <div class="bottom-btn">
+            <a href="./status.html" class="bottom-btn__link">
+                <strong class="bottom-btn__txt">확인</strong>
+            </a>
+        </div>
+    </main>
+</body>
+</html>
