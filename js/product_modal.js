@@ -46,6 +46,7 @@ window.addEventListener("DOMContentLoaded",function() {
         
         //  최대수량(maxCount) 넘는지 체크
         let result = userCount() + Number(modalCount.innerText);
+
         if(result > maxCount) {
             alert(`음료는 ${maxCount}개까지 선택가능합니다.`);
             return;
@@ -55,6 +56,8 @@ window.addEventListener("DOMContentLoaded",function() {
         let idx = user.findIndex(idx => idx.name === modalName.innerText);
         
         if(idx != -1) {
+            user[idx].img.src = user[idx].img.src;
+            user[idx].img.alt = user[idx].img.alt;
             user[idx].count = Number(user[idx].count) + Number(modalCount.innerText);
             user[idx].total = numberReplace(user[idx].total) + numberReplace(modalTotal.innerText);
             user[idx].total = user[idx].total.toLocaleString('ko-KR');
@@ -93,7 +96,7 @@ window.addEventListener("DOMContentLoaded",function() {
     
     function arrUpDate(itemListTag, arry) {
         const idTag = itemListTag.querySelectorAll(".product__id");
-        const imgTag = itemListTag.querySelectorAll(".product__img-inner");
+        const imgTag = itemListTag.querySelector(".product__img");
         const nameTag = itemListTag.querySelectorAll(".product__name");
         const priceTag = itemListTag.querySelectorAll(".product__price--number");
         const countTag = itemListTag.querySelectorAll(".product__count");
@@ -101,7 +104,10 @@ window.addEventListener("DOMContentLoaded",function() {
 
         arry[arry.length] = {
             id : idTag[0].innerText,
-            img : imgTag[0].innerHTML,
+            img : {
+                src : imgTag.getAttribute('src'),
+                alt : imgTag.getAttribute('alt')
+            },
             name : nameTag[0].innerText,
             price : priceTag[0].innerText,
             count : Number(countTag[0].innerText),

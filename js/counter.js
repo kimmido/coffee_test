@@ -1,6 +1,4 @@
 function countClick(e, countTag) {
-    maxCount = window.sessionStorage.getItem("maxCount");
-
     const increase = e.target.matches(".product__increase-area");
     const decrease = e.target.matches(".product__decrease-area");
 

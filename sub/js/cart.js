@@ -10,7 +10,7 @@ window.addEventListener("DOMContentLoaded", function() {
         <div class="product product--cart">
                 <div class="product__img-box">
                     <div class="product__img-inner">
-                        ${item.img}
+                        <img class="product__img" src="../${item.img.src}" alt="${item.img.alt}">
                     </div>
                 </div>
                 <div class="poduct__con">
