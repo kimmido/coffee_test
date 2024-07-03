@@ -1,4 +1,5 @@
 let phoneNum = "";
+let order = [];
 
 window.addEventListener("DOMContentLoaded", function() {
     const phoneBtn = document.getElementsByClassName("bottom-btn__link")[0];
@@ -13,12 +14,12 @@ window.addEventListener("DOMContentLoaded", function() {
     window.sessionStorage.removeItem("user");
     // 준비현황버튼 나타내기 값 전달
     window.sessionStorage.setItem("status", true);
-    const orderId = window.sessionStorage.getItem("orderId");
 
-    getData('/orders/' + orderId + '/number').then(data => {
-        orderNumber.innerHTML = data.orderNumber;
-        window.sessionStorage.setItem("orderNumber", data.orderNumber);
-    })
+    // 주문번호 세팅
+    orderNumber.innerHTML = 12;
+    window.sessionStorage.setItem("orderNumber", 12);
+
+    sessionUpdate("order", window.sessionStorage.getItem('paymentItem'));
 
     // 입력 칸 : 숫자만 입력하도록 제한 & 자동 이동
     input[0].addEventListener("input", function() {
@@ -50,15 +51,6 @@ window.addEventListener("DOMContentLoaded", function() {
         
         // phoneNum : 입력한 전화번호
         phoneNum = "010" + input[0].value + input[1].value
-
-        post("/orders/registerPhone", {
-            "orderId" : orderId,
-            "phone" : phoneNum
-        })
-        // TODO 실패 시 예외 처리 필요
-        .then(response => {
-        }).catch(response => {
-        })
     })
     
     stay.addEventListener("click", function() {
@@ -66,6 +58,6 @@ window.addEventListener("DOMContentLoaded", function() {
     })
     
     away.addEventListener("click", function() {
-        location.replace("/sub/status.html");
+        location.replace("./status.html");
     })
 })

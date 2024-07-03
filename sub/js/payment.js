@@ -1,7 +1,6 @@
 window.addEventListener("DOMContentLoaded", function() {
     const payItemList = document.getElementsByClassName("product-list")[0];
     const paymentItem = JSON.parse(window.sessionStorage.getItem('paymentItem'));
-    const host = window.location.protocol + "//" + window.location.host;
     
     // 결제 상품 목록 출력
     let itemList = '';
@@ -43,34 +42,7 @@ window.addEventListener("DOMContentLoaded", function() {
     payBtn.onclick = function(e) {
         if(consent.checked) {
             e.preventDefault();
-            const storeId = window.sessionStorage.getItem("storeId");
-    
-            let payProducts = [];
-            paymentItem.forEach(idx => {
-                payProducts[payProducts.length] = {
-                    "productId" : idx.id,
-                    "amount" : idx.count
-                }
-            })
-    
-            getData('/stores/status/' + storeId).then(data => {
-                if(data.status === 'error' || data.status === 'ERROR' ) {
-                    location.replace("/errors/fail.html");
-                }
-            })
-    
-            post("/payments/ready", {
-                "storeId" : storeId,
-                "productInfoList" : payProducts
-            })
-            .then(response => {
-                window.sessionStorage.setItem("orderId", response.orderId);
-                if(response.amount === 0) {
-                    location.replace("/sub/complete.html");
-                } else {
-                    requestPay(response.merchantUid, total)
-                }
-            })
+            location.replace("/sub/complete.html");
         } else {
             e.preventDefault();
             consent.classList.add("consent__check--emph");
