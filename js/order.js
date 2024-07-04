@@ -113,7 +113,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     <div class="product">
                         <div class="product__img-box">
                             <div class="product__img-inner">
-                                <img class="product__img" src="..${item.img.src}" alt="${item.img.alt}">
+                                <img class="product__img" src=".${item.img.src}" alt="${item.img.alt}">
                             </div>
                         </div>
                         <div class="product__txt-box">
