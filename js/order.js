@@ -1,8 +1,26 @@
 window.addEventListener('pageshow', function () {
     cartMark(); // 장바구니 음료수량 표시
+
+    // 음료준비현황 버튼 생성 유무
+    let statusBoolean = window.sessionStorage.getItem('status');;
+    let statusBtn = document.getElementsByClassName('status-btn')[0]
+    if (statusBoolean == 'true') {
+        statusBtn.classList.add('status-btn--visible');
+    } else {
+        statusBtn.classList.remove('status-btn--visible');
+    }
+    
 });
 
 window.addEventListener('DOMContentLoaded', () => {
+    let statusBoolean = window.sessionStorage.getItem('status');;
+    let statusBtn = document.getElementsByClassName('status-btn')[0]
+    if (statusBoolean == 'true') {
+        statusBtn.classList.add('status-btn--visible');
+    } else {
+        statusBtn.classList.remove('status-btn--visible');
+    }
+    
     let categoryList = [];
     categoryList = [
         {
@@ -129,17 +147,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         // });
     })();
-
-    // 음료준비현황 버튼 생성 유무
-    let statusBoolean = window.sessionStorage.getItem('status');
-    const statusBtn = document.getElementsByClassName('status-btn')[0];
-
-    if (statusBoolean == 'true') {
-        statusBtn.classList.add('status-btn--visible');
-    } else {
-        statusBtn.classList.remove('status-btn--visible');
-    }
-
+    
     // 카트가 비어있으면 메시지 출력
     const orderNextBtn = document.querySelector('.main--order .bottom-btn');
 

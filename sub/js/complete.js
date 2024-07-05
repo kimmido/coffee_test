@@ -1,5 +1,5 @@
-let phoneNum = "";
 let order = [];
+
 
 window.addEventListener("DOMContentLoaded", function() {
     const phoneBtn = document.getElementsByClassName("bottom-btn__link")[0];
@@ -18,6 +18,10 @@ window.addEventListener("DOMContentLoaded", function() {
     // 주문번호 세팅
     orderNumber.innerHTML = 12;
     window.sessionStorage.setItem("orderNumber", 12);
+
+    // 결제 일자
+    let date = new Date();
+    window.sessionStorage.setItem('dateInfo', date.toLocaleString());
 
     sessionUpdate("order", window.sessionStorage.getItem('paymentItem'));
 
@@ -50,7 +54,8 @@ window.addEventListener("DOMContentLoaded", function() {
         }
         
         // phoneNum : 입력한 전화번호
-        phoneNum = "010" + input[0].value + input[1].value
+        let phoneNum = "010" + input[0].value + input[1].value;
+        window.sessionStorage.setItem('phone', phoneNum);
     })
     
     stay.addEventListener("click", function() {
@@ -59,5 +64,6 @@ window.addEventListener("DOMContentLoaded", function() {
     
     away.addEventListener("click", function() {
         location.replace("./status.html");
+        window.sessionStorage.removeItem('phone');
     })
 })
