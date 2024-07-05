@@ -20,7 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
     } else {
         statusBtn.classList.remove('status-btn--visible');
     }
-    
+
     let categoryList = [];
     categoryList = [
         {
@@ -33,6 +33,11 @@ window.addEventListener('DOMContentLoaded', () => {
             title: '커피',
             order: 1,
         },
+        {
+            name: 'FRAPPUCCINO',
+            title: '프라푸치노',
+            order: 3,
+        }
     ];
 
     categoryList.sort(ascending('order')); // order 오름차순 정렬
@@ -47,7 +52,7 @@ window.addEventListener('DOMContentLoaded', () => {
             {
                 id: 0,
                 img: {
-                    src : '/images/아메리카노_HOT_255.png',
+                    src : '/images/coffee_hot.svg',
                     alt : '따뜻한 아메리카노'
                 },
                 name: '핫 아메리카노',
@@ -59,7 +64,7 @@ window.addEventListener('DOMContentLoaded', () => {
             {
                 id: 1,
                 img: {
-                    src : '/images/아메리카노_ICE_255.png',
+                    src : '/images/coffee_ice.svg',
                     alt : '아이스 아메리카노'
                 },
                 name: '아이스 아메리카노',
@@ -71,10 +76,10 @@ window.addEventListener('DOMContentLoaded', () => {
             {
                 id: 2,
                 img: {
-                    src : '/images/아메리카노_HOT_255.png',
-                    alt : '따뜻한 아메리카노'
+                    src : '/images/coffee_latte.svg',
+                    alt : '카페라떼'
                 },
-                name: '핫 아메리카노',
+                name: '카페라떼',
                 price: '1,500',
                 count: 1,
                 category: 'COFFEE',
@@ -83,26 +88,26 @@ window.addEventListener('DOMContentLoaded', () => {
             {
                 id: 3,
                 img: {
-                    src : '/images/아메리카노_HOT_255.png',
-                    alt : '따뜻한 아메리카노'
+                    src : '/images/ade_orange.svg',
+                    alt : '오렌지 에이드'
                 },
-                name: '핫 아메리카노',
-                price: '1,500',
-                count: 1,
-                category: 'COFFEE',
-                total: '1,500',
-            },
-            {
-                id: 4,
-                img: {
-                    src : '/images/아메리카노_HOT_255.png',
-                    alt : '레몬 에이드'
-                },
-                name: '레몬 에이드',
+                name: '오렌지 에이드',
                 price: '2,500',
                 count: 1,
                 category: 'ADE',
                 total: '2,500',
+            },
+            {
+                id: 4,
+                img: {
+                    src : '/images/frappuccino_choco.svg',
+                    alt : '초코 프라프치노'
+                },
+                name: '초코 프라프치노',
+                price: '3,000',
+                count: 1,
+                category: 'FRAPPUCCINO',
+                total: '3,000',
             }
         ];
 
