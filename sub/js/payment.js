@@ -42,7 +42,7 @@ window.addEventListener("DOMContentLoaded", function() {
     payBtn.onclick = function(e) {
         if(consent.checked) {
             e.preventDefault();
-            location.replace("/crc_test/sub/complete.html");
+            location.replace("/sub/complete.html");
         } else {
             e.preventDefault();
             consent.classList.add("consent__check--emph");

@@ -74,12 +74,14 @@
 /* location */
 .location {
     position: fixed;
-    left: var(--margin-default); bottom: calc(var(--height-btn-bottom) + var(--margin-small));
+    left: 50%;
+    bottom: calc(var(--height-btn-bottom) + var(--margin-small));
     width: calc(100% - var(--margin-default) * 2);
+    transform: translateX(-50%);
     padding: var(--margin-small);
-    box-shadow: 0 0 0 3px var(--color-brand03) inset;
-    border-radius: 100px;
     background-color: #fff;
+    border-radius: 100px;
+    box-shadow: 0 0 0 3px var(--color-brand03) inset;
 
     z-index: 40;
 }
@@ -134,7 +136,8 @@
 
 
 .modal--open {
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .product--modal {
