@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 .loading {
+    overflow: hidden;
     position: relative;
     height: 100%;
     background-color: var(--color-brand02);
