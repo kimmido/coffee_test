@@ -13,7 +13,7 @@ function getUrlParams() {
 
 window.addEventListener('DOMContentLoaded', function () {
     let link = document.location.href;
-    let loading = link.endsWith('loading.html');
+    let loading = link.endsWith('index.html');
     let entry;
 
     if (!loading) {
@@ -21,7 +21,7 @@ window.addEventListener('DOMContentLoaded', function () {
         setStoreName();
 
         if (entry != 'true') {
-            location.replace('/loading.html');
+            location.replace('/index.html');
         }
     }
 
