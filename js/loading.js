@@ -21,13 +21,13 @@ window.addEventListener('DOMContentLoaded', function () {
         setStoreName();
 
         if (entry != 'true') {
-            location.replace('/crc_test/loading.html');
+            location.replace('/loading.html');
         }
     }
 
     if (loading) {
         setTimeout(function () {
-            location.replace('/crc_test/order.html');
+            location.replace('/order.html');
         }, 2000);
         window.sessionStorage.setItem('entry', 'true');
     }
